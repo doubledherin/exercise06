@@ -10,10 +10,9 @@ for line in fin:
     line = line.rstrip().split(":")
     resto_ratings[line[0]] = line[1]
 
-print resto_ratings
+restos = sorted(resto_ratings.keys())
 
-
-#for item in sorted_rest_scores:
- #   print "Restaurant %s is rated at %s." % (item[0], item[1])
-
+for resto in restos:
+	print "Restaurant %s is rated at %s." % (resto, resto_ratings[resto])
+	
     
